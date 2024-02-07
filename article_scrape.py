@@ -6,10 +6,10 @@ url = "https://www.pbs.org/newshour/politics/trumps-2024-trials-where-they-stand
 response = requests.get(url)
 print(response)
 soup = BeautifulSoup(response.content, 'html.parser')
-print(soup)
 
 titles = soup.select('h1.title')  # Replace with appropriate selectors
 article_contents = soup.select('div.article-body')  # Adjust based on page structure
+print(article_contents)
 
 for title, content in zip(titles, article_contents):
     print(title.text.strip())
