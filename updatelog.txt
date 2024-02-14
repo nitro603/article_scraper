@@ -1,0 +1,4 @@
+log 2/6/2024
+    I have the openai scraper retrieving the article titles and topics, this will be useful to scrape the 
+    news website (pbs.org). That's the next step, be able to use beautiful soup to retrieve the content on 
+    a specific article :3 
