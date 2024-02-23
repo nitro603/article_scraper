@@ -16,3 +16,5 @@
     poetry env use python
 ### 3. Install dependencies
     poetry install
+
+To start: poetry run python __file_name__ 
