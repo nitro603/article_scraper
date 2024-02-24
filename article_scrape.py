@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 def make_link(input):
     
-    
+    #https://www.w3schools.com/python/python_ref_string.asp //string methods
     return input
     
 def scrape(link):
