@@ -2,3 +2,17 @@ log 2/6/2024
     I have the openai scraper retrieving the article titles and topics, this will be useful to scrape the 
     news website (pbs.org). That's the next step, be able to use beautiful soup to retrieve the content on 
     a specific article :3 
+
+log 2/21/2024
+    The following are title outputs:
+        - 1. "Continued Israeli airstrikes flatten parts of Rafah amid slow progress for Gaza cease-fire" - World
+        - 2. "Capitol Hill fight over spending pushes country closer to government shutdown" - Politics
+        - 3. "Measles cases are rising in the U.S. Here’s why misinformation about the vaccine persists today" - Health
+    The goal is to turn one of those inputs into a url we can extract information from.
+
+    plan: 
+        # 1. get output from title_scrape (use demo output first)
+        # 2. create a function that takes the title/politics string as input and outputs it as a website link
+        # 3. create a function that takes the link as input and outputs the contents as a string
+        # 4. Create a function that takes the string as input and uploads to a database.
+        # 5. Set up post get api calls

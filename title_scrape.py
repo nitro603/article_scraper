@@ -8,7 +8,7 @@ dotenv.load_dotenv()
 
 def web_qa(url_list, query, out_name):
     openai = ChatOpenAI(
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4",
         max_tokens=2048
     )
     loader_list = []
