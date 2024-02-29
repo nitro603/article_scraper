@@ -59,3 +59,4 @@ prompt = '''
 '''
 
 #collect_titles(url_list, prompt)
+print(make_link("- 2. Capitol Hill fight over spending pushes country closer to government shutdown - Politics"))
