@@ -55,7 +55,7 @@ def collect_titles(url_list, query):
 url_list = ["https://www.pbs.org/newshour/"];
 
 prompt = '''
-    Can you make a list containing the titles of the articles and their topic (example: politics, world or nation)
+    Can you make a list containing the titles of the articles and their topic (example: politics, world or nation)?
 '''
 
 #collect_titles(url_list, prompt)
