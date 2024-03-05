@@ -18,3 +18,8 @@ log 2/21/2024
         # 3. create a function that takes the link as input and outputs the contents as a string
         # 4. Create a function that takes the string as input and uploads to a database.
         # 5. Set up post get api calls
+
+log 3/5/24
+    update plans:
+    - when calling this api the url will be kept on a .env for security
+    - idea, make gpt send results as json to make it easier to gather data
