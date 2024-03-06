@@ -24,3 +24,6 @@ log 3/5/24
     - when calling this api the url will be kept on a .env for security
     - idea, make gpt send results as json to make it easier to gather data ( did not work :[ )
     - skip first two lines of the output and split the text by new line into an array (split function)
+
+log 3/6/24
+    - make if statements for not specified type articles and special case titles like (. , WATCH, WATCH LIVE:)

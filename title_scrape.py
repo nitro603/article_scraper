@@ -12,9 +12,9 @@ def make_link(input):
     #output goal: https://www.pbs.org/newshour/politics/trumps-2024-trials-where-they-stand-and-what-to-expect"
     
     input = input.lower()
+    #here take topic at the end
     topic = find_topic(input)
     print(topic)
-    #here take topic at the end
     #get the last quarter piece of the string and from that index to last part, find the first -, split to get topic
     
     #get substring
@@ -64,6 +64,6 @@ prompt = '''
     Can you make a list containing the titles of the articles and their topic (example: politics, world or nation)?
 '''
 
-#collect_titles(url_list, prompt)
-print(make_link("2.   Capitol Hill fight over spending pushes country closer to government shutdown  - Politics"))
-print(make_link("3.   Measles cases are rising in the U.S. Here’s why misinformation about the vaccine persists today  - Health"))
+collect_titles(url_list, prompt)
+#print(make_link("2.   Capitol Hill fight over spending pushes country closer to government shutdown  - Politics"))
+#print(make_link("3.   Measles cases are rising in the U.S. Here’s why misinformation about the vaccine persists today  - Health"))
