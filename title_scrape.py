@@ -42,9 +42,9 @@ def collect_titles(url_list, query):
         max_tokens=2048
     )
     loader_list = []
-    for i in url_list:
-        print('loading url: %s' % i)
-        loader_list.append(WebBaseLoader(i))
+    #for i in url_list:
+    #    print('loading url: %s' % i)
+    #    loader_list.append(WebBaseLoader(i))
 
     index = VectorstoreIndexCreator().from_loaders(loader_list)
     ans = index.query(question=query,
@@ -64,6 +64,5 @@ prompt = '''
     Can you make a list containing the titles of the articles and their topic (example: politics, world or nation)?
 '''
 
-collect_titles(url_list, prompt)
-#print(make_link("2.   Capitol Hill fight over spending pushes country closer to government shutdown  - Politics"))
-#print(make_link("3.   Measles cases are rising in the U.S. Here’s why misinformation about the vaccine persists today  - Health"))
+#collect_titles(url_list, prompt)
+print(make_link("- 2.  Capitol Hill fight over spending pushes country closer to government shutdown - Politics"))

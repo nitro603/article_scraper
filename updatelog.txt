@@ -27,3 +27,8 @@ log 3/5/24
 
 log 3/6/24
     - make if statements for not specified type articles and special case titles like (. , WATCH, WATCH LIVE:)
+
+log 3/27/24
+    - current plans take chatgpt output and make into an array of strings that contain title and politics part
+    idea, get politics part first and use that length to determine the end of the title string, then trim whatever is left
+    
