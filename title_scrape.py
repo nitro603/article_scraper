@@ -6,6 +6,32 @@ import dotenv
 
 dotenv.load_dotenv()
 
+def collect_titles(url_list, query):
+    openai = ChatOpenAI(
+        model_name="gpt-4",
+        max_tokens=2048
+    )
+    loader_list = []
+    for i in url_list:
+        print('loading url: %s' % i)
+        loader_list.append(WebBaseLoader(i))
+
+    index = VectorstoreIndexCreator().from_loaders(loader_list)
+    ans = index.query(question=query,
+                      llm=openai)
+    #print("")
+    #print(ans)
+    return ans
+
+    #outfile_name = out_name + datetime.now().strftime("%m-%d-%y-%H%M%S") + ".out"
+    #with open(outfile_name, 'w') as f:
+    #    f.write(ans)
+    
+def make_array(input):
+    array = input.splitlines()
+    
+    return array
+
 def make_link(input):
     #https://www.w3schools.com/python/python_ref_string.asp //string methods
     #input: 1. Continued Israeli airstrikes flatten parts of Rafah amid slow progress for Gaza cease-fire - World
@@ -22,8 +48,6 @@ def make_link(input):
     #replace "" by using ('"')
     result = replaced[5:len(replaced) - len(topic)]
     
-    
-    
     return result
 
 def find_topic(input):
@@ -36,33 +60,16 @@ def find_topic(input):
     
     return topic
 
-def collect_titles(url_list, query):
-    openai = ChatOpenAI(
-        model_name="gpt-4",
-        max_tokens=2048
-    )
-    loader_list = []
-    #for i in url_list:
-    #    print('loading url: %s' % i)
-    #    loader_list.append(WebBaseLoader(i))
-
-    index = VectorstoreIndexCreator().from_loaders(loader_list)
-    ans = index.query(question=query,
-                      llm=openai)
-    print("")
-    print(ans)
-
-    #outfile_name = out_name + datetime.now().strftime("%m-%d-%y-%H%M%S") + ".out"
-    #with open(outfile_name, 'w') as f:
-    #    f.write(ans)
-
-
 
 url_list = ["https://www.pbs.org/newshour/"];
-
 prompt = '''
-    Can you make a list containing the titles of the articles and their topic (example: politics, world or nation)?
+    Make a list containing the titles of the articles and their topic (example: politics, world or nation, if not specified just state not specified)?
 '''
 
-#collect_titles(url_list, prompt)
-print(make_link("- 2.  Capitol Hill fight over spending pushes country closer to government shutdown - Politics"))
+#array = make_array(collect_titles(url_list, prompt))
+example1 = '''8. "U.S. Census changes how it identifies people by race and ethnicity, creates Middle Eastern category for first time" - Politics'''
+make_link(example1)
+
+#example2 = '''1. "Baltimore crews recover bodies of 2 killed in bridge collapse" - Not specified'''
+#example3 = '''9. '‘What kind of future do I have in Mississippi’? Medicaid advocates push for expansion' - Topic: Health'''
+#example4 = '''1. Title: "Baltimore crews recover bodies of 2 killed in bridge collapse" - Topic: Not specified'''
