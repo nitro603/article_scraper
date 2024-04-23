@@ -35,3 +35,9 @@ log 3/27/24
 log 3/28/24
     - there seems to be certain topics that aren't specified. these will be counted as "show" (that's how they're showed on the url)
     - I won't worry about the above yet, the important part is splitting the chatgpt output into an array of strings
+
+log 4/24/24
+    - next step is printing out through terminal the links of all possible titles
+    - holy mackerel I forgot that I wasn't done with making the title! this is why it's important to take notes!
+        - on that note, that's the current focus then the above
+    - Current error (3:42 pm) Partial string index
