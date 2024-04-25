@@ -39,5 +39,9 @@ log 3/28/24
 log 4/24/24
     - next step is printing out through terminal the links of all possible titles
     - holy mackerel I forgot that I wasn't done with making the title! this is why it's important to take notes!
-        - on that note, that's the current focus then the above
+        - on that note, that's the current focus 
     - Current error (3:42 pm) Partial string index
+
+log 4/25/24
+    - titles and topics are now consistently being outputted
+    - next step is formatting them into links, then start scraping!!
