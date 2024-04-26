@@ -73,7 +73,6 @@ def find_title(input):
     title = title.replace(" ", "-")
     return title
 
-
 #url_list = ["https://www.cnbc.com/investing/"]
 url_list = ["https://www.pbs.org/newshour/science"]
 

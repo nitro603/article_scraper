@@ -51,3 +51,7 @@ log 4/26/24
     - I'm considering expanding the scope for this api to be able to take from multiple news sources, including cnbc.com and arstechnica.com
         - on both websites the title scrape works fine, only thing left to do is to tweak the make_links code to fit their respective url endpoints
     - next step is wrapping up current use case
+
+log 4/27/24
+    - I've decided that I'll use mysql to create this application's database and google cloud to host (https://cloud.google.com/sql/pricing#sql-server)
+    
