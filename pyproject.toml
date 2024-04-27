@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "article-scraper"
+version = "0.1.0"
+description = "An API that scrapes articles from PBS NewsHour."
+authors = ["nitro603 <tavaracristian93@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.6"
+python-dotenv = "^1.0.1"
+langchain-community = "^0.0.19"
+langchain-openai = "^0.0.5"
+requests = "^2.31.0"
+bs4 = "^0.0.2"
+chromadb = "^0.4.22"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

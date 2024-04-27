@@ -1,0 +1,59 @@
+log 2/6/2024
+    I have the openai scraper retrieving the article titles and topics, this will be useful to scrape the 
+    news website (pbs.org). That's the next step, be able to use beautiful soup to retrieve the content on 
+    a specific article :3 
+
+log 2/21/2024
+    The following are title outputs:
+        - 1. "Continued Israeli airstrikes flatten parts of Rafah amid slow progress for Gaza cease-fire" - World
+        - 2. "Capitol Hill fight over spending pushes country closer to government shutdown" - Politics
+        - 3. "Measles cases are rising in the U.S. Here’s why misinformation about the vaccine persists today" - Health
+        - 4. "WATCH: President Biden�s Address to the Nation | PBS NewsHour�s full evening coverage" - Politics
+        - 5. "WATCH LIVE: White House holds daily briefing ahead of National Governors Association Winter Meeting" - Politics
+    The goal is to turn one of those inputs into a url we can extract information from.
+
+    plan: 
+        # 1. get output from title_scrape (use demo output first)
+        # 2. create a function that takes the title/politics string as input and outputs it as a website link
+        # 3. create a function that takes the link as input and outputs the contents as a string
+        # 4. Create a function that takes the string as input and uploads to a database.
+        # 5. Set up post get api calls
+
+log 3/5/24
+    update plans:
+    - when calling this api the url will be kept on a .env for security
+    - idea, make gpt send results as json to make it easier to gather data ( did not work :[ )
+    - skip first two lines of the output and split the text by new line into an array (split function)
+
+log 3/6/24
+    - make if statements for not specified type articles and special case titles like (. , WATCH, WATCH LIVE:)
+
+log 3/27/24
+    - current plans take chatgpt output and make into an array of strings that contain title and politics part
+    idea, get politics part first and use that length to determine the end of the title string, then trim whatever is left
+
+log 3/28/24
+    - there seems to be certain topics that aren't specified. these will be counted as "show" (that's how they're showed on the url)
+    - I won't worry about the above yet, the important part is splitting the chatgpt output into an array of strings
+
+log 4/24/24
+    - next step is printing out through terminal the links of all possible titles
+    - holy mackerel I forgot that I wasn't done with making the title! this is why it's important to take notes!
+        - on that note, that's the current focus 
+    - Current error (3:42 pm) Partial string index
+
+log 4/25/24
+    - titles and topics are now consistently being outputted
+    - next step is formatting them into links, then start scraping!!
+
+log 4/26/24
+    - URLS are now being outputted, still have to see if there's more cases where the url may not work but so far it's good!
+    - I'm considering expanding the scope for this api to be able to take from multiple news sources, including cnbc.com and arstechnica.com
+        - on both websites the title scrape works fine, only thing left to do is to tweak the make_links code to fit their respective url endpoints
+    - next step is wrapping up current use case
+    - ###IDEA### I've decided that I'll use mysql to create this application's database and google cloud to host (https://cloud.google.com/sql/pricing#sql-server)
+
+log 4/28
+    - URL SCRAPE IS COMPLETE, now I can focus on scraping data 
+    - ###IDEA### what's left to do? add more websites (cnbc and arstechnica)
+    
