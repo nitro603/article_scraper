@@ -57,3 +57,6 @@ log 4/28
     - URL SCRAPE IS COMPLETE, now I can focus on scraping data 
     - ###IDEA### what's left to do? add more websites (cnbc and arstechnica)
     
+log 4/29
+    - articles are being scraped but is including read more so I'll have to remove that
+    - surprisingly simple to use beautiful soup for data scraping
